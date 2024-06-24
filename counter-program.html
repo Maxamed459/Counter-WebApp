@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter program</title>
+    <style>
+        #countlebel{
+    display: block;
+    text-align: center;
+    font-size: 200px;
+    font-family: Helvetica;
+}
+
+#button-container{
+    text-align: center;
+}
+
+.buttons{
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(108, 108, 244);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.buttons:hover{
+    background-color: rgb(57, 57, 245);
+}
+    </style>
+</head>
+<body>
+    <label id="countlebel">0</label><br>
+   <div id="button-container">
+    <button id="decrees" class="buttons">Degrees</button>
+    <button id="reset" class="buttons">Reset</button>
+    <button id="increes" class="buttons">Increes</button>
+   </div>
+   <script>
+    const degrees = document.getElementById("decrees");
+const resetbtn = document.getElementById("reset");
+const increes = document.getElementById("increes");
+const countlebel = document.getElementById("countlebel");
+let count = 0;
+
+increes.onclick = function(){
+    count++;
+    countlebel.textContent = count;
+}
+degrees.onclick = function(){
+    count--;
+    countlebel.textContent = count;
+}
+reset.onclick = function(){
+    count = 0;
+    countlebel.textContent = count;
+}
+   </script>
+</body>
+</html>
